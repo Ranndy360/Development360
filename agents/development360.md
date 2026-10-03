@@ -19,10 +19,16 @@ without the developer's explicit sign-off.
    Produce the slice table, get approval, write `.specs/<TICKET>-<title>/` and the
    implementation-order file.
 
-3. **Implement** — `/implement-specs-nestjs .specs/<folder>/implementation-order.md`
-   This skill cannot be invoked by the model; ask the developer to run it, or — if they
-   explicitly asked you to implement — follow its protocol yourself: one spec at a time,
-   TDD, build/test/lint, record, commit, until `<promise>COMPLETE</promise>`.
+3. **Implement** — `/implement-specs-<stack> .specs/<folder>/implementation-order.md`
+   Pick the skill that matches the project's stack, detected from `package.json`:
+   - `@nestjs/core` → `/implement-specs-nestjs`
+   - `next` → `/implement-specs-nextjs`
+   - `react-native` or `expo` → `/implement-specs-react-native`
+   In a monorepo, pick per package the specs touch and say which one you chose.
+   These skills cannot be invoked by the model; ask the developer to run the right one, or —
+   if they explicitly asked you to implement — follow its protocol yourself (read its
+   `SKILL.md` and `references/senior-checklist.md` where present): one spec at a time,
+   TDD, typecheck/build/test/lint, record, commit, until `<promise>COMPLETE</promise>`.
 
 # Working rules
 

@@ -1,6 +1,6 @@
 ---
 name: us-to-specs
-description: Break a refined user story into independently implementable vertical-slice specs (tracer bullets) under `.specs/`, with an implementation-order file. Use after /refine-us and before /implement-specs-nestjs.
+description: Break a refined user story into independently implementable vertical-slice specs (tracer bullets) under `.specs/`, with an implementation-order file. Use after /refine-us and before an /implement-specs-* skill (nestjs, nextjs, react-native).
 argument-hint: "[USER_STORY_FILE]"
 ---
 
@@ -74,9 +74,11 @@ no blockers and `Blocked (NN, NN)` otherwise.
 
 # 5. Hand off
 
-Print the folder path, the table, and the next command:
+Print the folder path, the table, and the next command, picking the implementation skill
+that matches the project's stack (detect it from `package.json`: `@nestjs/core` → nestjs,
+`next` → nextjs, `react-native` / `expo` → react-native):
 
-`/implement-specs-nestjs .specs/<folder>/implementation-order.md`
+`/implement-specs-<stack> .specs/<folder>/implementation-order.md`
 
 # Rules
 
