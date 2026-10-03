@@ -1,0 +1,16 @@
+{
+  "name": "development360",
+  "description": "Specs-driven development workflow for Claude Code: refine a user story through Socratic discovery, slice it into vertical tracer-bullet specs, then implement the specs one by one with TDD and a build/test/lint feedback loop.",
+  "version": "1.0.0",
+  "author": {
+    "name": "development360 contributors"
+  },
+  "keywords": [
+    "specs-driven-development",
+    "user-stories",
+    "tracer-bullets",
+    "tdd",
+    "nestjs",
+    "workflow"
+  ]
+}
